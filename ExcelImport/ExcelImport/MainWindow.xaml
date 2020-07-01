@@ -1,0 +1,27 @@
+﻿<Window x:Class="ExcelImport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExcelImport"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="20,0">
+            <Button Name="CreateDTBtn" Content="建立資料庫" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Center" Click="CreateDTBtn_Click"/>
+            <TextBlock Name="CreateDTRemind" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20,0"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20,0">
+            <Button Name="fileLoad" Width="100" Height="30" Content="載入" Click="FileImport_Click"
+                HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBox Name="dataPath" Width="Auto" Height="30" MinWidth="200" Text="ABC" IsEnabled="False"
+                 HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
+        </StackPanel>
+        <TextBox Name="InsertOverflow" Grid.Row="2" Margin="20" IsReadOnly="True"/>
+    </Grid>
+</Window>
